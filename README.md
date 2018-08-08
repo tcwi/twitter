@@ -57,7 +57,5 @@ This codebase contains some extra comments to explain some decisions that I made
 
 A couple of things I'd add/fix with longer to spend on the project:
 
--   Sometimes the area fill on the stats graph doesn't reach the baseline, if the user doesn't have tweets with 0 retweets. This can cause the graph to have an odd line through the middle where points on the area graph are joined with a stroke that shouldn't be. A fix could be manipulating start/end values and rendering separate area andline graphs.
--   I don't think that using D3 with React would be a good fit if this project were to go into production - I'd re-evaluate using a much more lightweight library to render a line graph, and then introduce D3 again if we were going to be rendering a lot of complex visualisations.
 -   The variables from the graphQL queries are snake case not camel case, I'd transform these to be consistent.
 -   I'd make use of CSS variables for colours, media queries etc (or potentially CSS Blocks or a CSS-in-JS approach), and extract the CSS from the head into a seperate CSS file using webpack.
