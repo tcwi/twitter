@@ -5,6 +5,7 @@ exports[`ProfilePage renders a user Profile and Feed on success 1`] = `
   className="profilepage"
 >
   <Profile
+    cover_image_url="https://images.unsplash.com/photo-1531951286638-d1b6cdae30c9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78d69f6595028931f9b88466dcd54ca9&auto=format&fit=crop&w=800&q=80"
     following={120}
     name="Tom"
   />

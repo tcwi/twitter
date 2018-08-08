@@ -42,6 +42,10 @@ module.exports = {
             {
                 test: /\.svg$/i,
                 loader: 'svg-url-loader?limit=3000&name=[path][name].[ext]'
+            },
+            {
+                test: /\.(woff|woff2)$/i,
+                loader: 'file-loader?name=[path][name].[ext]'
             }
         ]
     },

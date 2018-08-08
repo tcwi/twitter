@@ -6,6 +6,11 @@ exports[`Profile renders a users profile 1`] = `
 >
   <div
     className="banner"
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
   />
   <section
     className="details"
@@ -38,11 +43,11 @@ exports[`Profile renders a users profile 1`] = `
         value={123}
       />
       <Statistic
-        title="Followers"
+        title="Following"
         value={123}
       />
       <Statistic
-        title="Following"
+        title="Followers"
         value={123}
       />
     </div>
@@ -56,6 +61,11 @@ exports[`Profile resizes the profile image when the image URL contains "normal" 
 >
   <div
     className="banner"
+    style={
+      Object {
+        "backgroundImage": "url(undefined)",
+      }
+    }
   />
   <section
     className="details"
@@ -88,11 +98,11 @@ exports[`Profile resizes the profile image when the image URL contains "normal" 
         value={123}
       />
       <Statistic
-        title="Followers"
+        title="Following"
         value={123}
       />
       <Statistic
-        title="Following"
+        title="Followers"
         value={123}
       />
     </div>

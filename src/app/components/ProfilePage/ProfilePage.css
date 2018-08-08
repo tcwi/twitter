@@ -1,8 +1,8 @@
 .profilepage {
-    @media (min-width: 768px) {
+    @media (min-width: 640px) {
         display: flex;
         align-items: start;
-        max-width: 1080px;
+        max-width: 783px;
         margin: 0 auto;
     }
 }

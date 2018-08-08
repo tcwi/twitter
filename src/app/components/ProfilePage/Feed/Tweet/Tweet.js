@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Tweet.css';
 import enlargeImage from '../../../../utils/enlargeImage';
 
-const Tweet = ({ text, created_at, id, user }) => {
+const Tweet = ({ text, created_at, id, user, children }) => {
     const { screen_name, name, profile_image_url } = user;
 
     const date = new Date(created_at).toLocaleString('en-gb', {
@@ -24,7 +24,10 @@ const Tweet = ({ text, created_at, id, user }) => {
                     <h4>@{screen_name}</h4>
                     <time dateTime={created_at}>{date}</time>
                 </div>
-                <section>{createMentionLinks(text, id)}</section>
+                <section className={styles.text}>
+                    {createMentionLinks(text, id)}
+                </section>
+                {children}
             </article>
         </div>
     );
@@ -34,6 +37,8 @@ export function createMentionLinks(text) {
     const validUsername = /(@[a-zA-Z0-9_]+)/gi;
     const splitText = text.split(validUsername);
 
+    // in the designs hashtags are blue - would need to split
+    // these out too to do this
     const processedText = splitText.map(
         (section, index) =>
             section.startsWith('@') ? (

@@ -1,30 +1,31 @@
 .nav {
-    height: 80px;
-    border-bottom: 1px solid #dedede;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 12px;
 
-    @media (width > 768px) {
+    @media (min-width: 640px) {
         justify-content: start;
-        padding-left: 48px;
+        padding-left: 30px;
     }
 }
 
 .home,
 .stats {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     text-decoration: none;
     color: black;
-    margin-right: 40px;
+    width: 92px; /* includes before pseudoelement (70px + 22px) */
 
     &::before {
-        margin-right: 12px;
+        margin-right: 10px;
         display: inline-block;
-        width: 18px;
-        height: 18px;
+        /* width is 16px in designs but my icons are square */
+        width: 12px;
+        height: 12px;
     }
 
     &:hover {
@@ -33,7 +34,7 @@
 }
 
 .active {
-    color: #306aff;
+    color: #3c74ff;
 }
 
 /* When using svgs in the before pseudoelement I can't change the fill

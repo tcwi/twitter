@@ -37,14 +37,52 @@ exports[`RetweetGraph renders a retweet graph once library loaded 1`] = `
     </span>
   </div>
   <mockConstructor
+    areaDataAccessor="areaPoints"
     areaStyle={
       Object {
-        "fill": "#e0e9ff",
-        "stroke": "#306aff",
-        "strokeWidth": "2px",
+        "fill": "rgba(60, 116, 255, 0.16)",
       }
     }
     areas={
+      Array [
+        Object {
+          "areaPoints": Array [
+            Object {
+              "date": 1245354273000,
+              "retweet_count": 0,
+            },
+            Object {
+              "date": 1245354273000,
+              "retweet_count": 100,
+            },
+            Object {
+              "date": 1245354273000,
+              "retweet_count": 10,
+            },
+            Object {
+              "date": 1245354273000,
+              "retweet_count": 0,
+            },
+          ],
+        },
+      ]
+    }
+    hoverAnnotation={
+      Array [
+        Object {
+          "color": "transparent",
+          "type": "frame-hover",
+        },
+      ]
+    }
+    lineStyle={
+      Object {
+        "background": "rgba(60, 116, 255, 0.16)",
+        "stroke": "#3C74FF",
+        "strokeWidth": "2px",
+      }
+    }
+    lines={
       Array [
         Object {
           "coordinates": Array [
@@ -60,19 +98,11 @@ exports[`RetweetGraph renders a retweet graph once library loaded 1`] = `
         },
       ]
     }
-    hoverAnnotation={
-      Array [
-        Object {
-          "color": "transparent",
-          "type": "frame-hover",
-        },
-      ]
-    }
     responsiveWidth={true}
     size={
       Array [
         700,
-        300,
+        207,
       ]
     }
     tooltipContent={[Function]}

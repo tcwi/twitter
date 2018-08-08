@@ -10,12 +10,16 @@ const Profile = props => {
         profile_image_url,
         tweets_count,
         followers_count,
-        following
+        following,
+        cover_image_url
     } = props;
 
     return (
         <div className={styles.profile}>
-            <div className={styles.banner} />
+            <div
+                className={styles.banner}
+                style={{ backgroundImage: `url(${cover_image_url})` }}
+            />
             <section className={styles.details}>
                 <div className={styles.personal}>
                     <img
@@ -30,8 +34,8 @@ const Profile = props => {
                 </div>
                 <div className={styles.stats}>
                     <Statistic title="Tweets" value={tweets_count} />
-                    <Statistic title="Followers" value={followers_count} />
                     <Statistic title="Following" value={following} />
+                    <Statistic title="Followers" value={followers_count} />
                 </div>
             </section>
         </div>

@@ -1,31 +1,33 @@
 .tooltip {
-    background-color: #306aff;
+    background-color: #3c74ff;
+    color: #ffffff;
+    line-height: 13px;
+    font-size: 12px;
     display: inline-block;
-    padding: 12px 24px;
+    padding: 8px 16px;
     text-align: center;
     margin-left: -50%;
-    margin-top: 8px;
+    position: relative;
+    top: -50px;
 
     &::after {
         position: absolute;
         height: 0;
         width: 0;
-        bottom: calc(100% - 8px);
-        left: 50%;
+        top: 100%;
+        left: calc(50% - 8px);
         border: solid transparent;
         content: '';
         pointer-events: none;
-        border-bottom-color: #306aff;
+        border-top-color: #3c74ff;
         border-width: 8px;
-        margin-left: calc(-50% - 8px);
     }
 }
 
 .date {
-    color: #94b4fe;
+    opacity: 0.5;
 }
 
 .count {
-    color: #ffffff;
     font-weight: bold;
 }

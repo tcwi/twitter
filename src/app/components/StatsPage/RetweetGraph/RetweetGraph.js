@@ -30,6 +30,12 @@ class RetweetGraph extends PureComponent {
             retweet_count
         }));
 
+        const areaPoints = [
+            { ...coordinates[0], retweet_count: 0 },
+            ...coordinates,
+            { ...coordinates[coordinates.length - 1], retweet_count: 0 }
+        ];
+
         return (
             <div className={styles.graph}>
                 <div className={styles.infobar}>
@@ -38,15 +44,20 @@ class RetweetGraph extends PureComponent {
                 </div>
                 {ResponsiveXYFrame ? (
                     <ResponsiveXYFrame
-                        size={[700, 300]}
+                        size={[700, 207]}
                         responsiveWidth
-                        areas={[{ coordinates }]}
+                        lines={[{ coordinates }]}
+                        areas={[{ areaPoints }]}
                         xAccessor="date"
                         yAccessor="retweet_count"
+                        areaDataAccessor="areaPoints"
+                        lineStyle={{
+                            stroke: '#3C74FF',
+                            strokeWidth: '2px',
+                            background: 'rgba(60, 116, 255, 0.16)'
+                        }}
                         areaStyle={{
-                            fill: '#e0e9ff',
-                            stroke: '#306aff',
-                            strokeWidth: '2px'
+                            fill: 'rgba(60, 116, 255, 0.16)'
                         }}
                         hoverAnnotation={[
                             { type: 'frame-hover', color: 'transparent' }

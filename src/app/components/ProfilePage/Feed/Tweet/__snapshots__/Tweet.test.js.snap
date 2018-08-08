@@ -27,7 +27,9 @@ exports[`Tweet renders a Tweet 1`] = `
         Jul 20
       </time>
     </div>
-    <section>
+    <section
+      className="text"
+    >
       Hello World
     </section>
   </article>

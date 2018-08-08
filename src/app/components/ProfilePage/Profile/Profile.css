@@ -1,20 +1,23 @@
 .profile {
     background-color: #ffffff;
-    margin: 12px;
+    margin: 15px;
 
-    @media (width >= 768px) {
-        width: 420px;
+    @media (min-width: 640px) {
+        width: 240px;
         flex-shrink: 0;
+        margin-right: 0;
     }
 }
 
 .banner {
-    height: 100px;
+    height: 120px;
+    background: no-repeat center center;
     background-color: #306aff;
+    background-size: cover;
 }
 
 .details {
-    padding: 16px;
+    padding: 15px;
 }
 
 .personal {
@@ -23,13 +26,13 @@
 }
 
 .avatar {
-    width: 96px;
-    height: 96px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
     position: relative;
     border-radius: 50%;
-    border: #ffffff solid 3px;
-    top: -66px;
+    border: #ffffff solid 2px;
+    top: -42px;
 }
 
 .names {
@@ -38,8 +41,9 @@
 
     & > h1 {
         font-weight: bold;
-        font-size: 24px;
-        padding: 0;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 0 0 4px 0;
         margin: 0;
         overflow: hidden;
         white-space: nowrap;
@@ -47,8 +51,10 @@
     }
 
     & > h2 {
-        color: #737373;
-        font-size: 18px;
+        color: #000000;
+        opacity: 0.66;
+        font-size: 12px;
+        line-height: 14px;
         padding: 0;
         margin: 0;
         font-weight: normal;
@@ -59,5 +65,10 @@
     display: flex;
     position: relative;
     justify-content: space-between;
+    margin-top: 32px;
     width: 80%;
+
+    @media (min-width: 640px) {
+        width: 100%;
+    }
 }
