@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Please note: this codebase no longer runs correctly due to outdated dependencies, and following the instructions below will probably fail.
+
 # Twitter Clone
 
 A twitter clone built using React and the GraphQLhub twitter endpoint.
